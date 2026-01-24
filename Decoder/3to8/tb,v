@@ -1,0 +1,24 @@
+`timescale 1ns/1ps
+
+module testbench;
+
+    // ===== KHAI BÁO TÍN HIỆU =====
+    	reg enable;
+	reg [1:0] in;
+	wire [7:0] out;
+
+    // ===== GỌI MODULE CẦN TEST =====
+ 	decoder_3to8 uut ( .enable(enable) ,.in(in) , .out(out));
+    // ===== KÍCH THÍCH TEST =====
+    	initial begin
+          $monitor("At time %t, enable = %b , in = %b , out=%b", $time, enable , in , out);
+		enable = 1'b0; in = 2'b00; #10;
+		enable = 1'b0; in = 2'b01; #10;
+		enable = 1'b0; in = 2'b10; #10;
+		enable = 1'b0; in = 2'b11; #10;
+        enable = 1'b1; in = 2'b00; #10;
+		enable = 1'b1; in = 2'b01; #10;
+		enable = 1'b1; in = 2'b10; #10;
+		enable = 1'b1; in = 2'b11; #10;
+	end
+endmodule
