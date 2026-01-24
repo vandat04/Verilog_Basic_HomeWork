@@ -16,9 +16,7 @@ reg [8:0] out;
 
 always @(*) begin
         out      = 9'b0;
-        
-        carry    = 1'b0;
-
+        y        = 8'b0;
 	case (ctrl)
 		3'b000: 
 			begin
@@ -52,7 +50,9 @@ always @(*) begin
 			end
 		default: 
 			begin
-                // NOT a math operation → flags = 0
+                zero     = 1'b0;  
+                carry    = 1'b0;
+                negative = 1'b0;
             end	
 	endcase
           
