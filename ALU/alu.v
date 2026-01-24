@@ -46,7 +46,7 @@ always @(*) begin
                 y[7:0]   = out[7:0];
                 zero     = (y == 0) ? (1'b1) : (1'b0);  
                 carry    = out[8];
-                negative = y[7];
+                negative = (a[7:0] < b[7:0]) ? (1'b1) : (1'b0);
 			end
 		default: 
 			begin
