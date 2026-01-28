@@ -1,3 +1,9 @@
+// “Mỗi lần có xung clock,
+// tôi lấy giá trị hiện tại,
+// cộng thêm 1,
+// rồi lưu lại.”
+
+
 module bit_counter (
 	input wire clk,
 	input wire rst_n,
