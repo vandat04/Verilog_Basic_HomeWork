@@ -3,6 +3,27 @@
 // cộng thêm 1,
 // rồi lưu lại. Nếu overflow thì reset”
 
+// module bit_counter (
+// 	input wire clk,
+// 	input wire rst_n,
+// 	output wire overflow,
+// 	output wire [7:0] count
+// );
+// 	reg [7:0] cnt;
+//     wire [7:0] pre_cnt;
+//     assign pre_cnt = count + 1;
+
+// 	always @(posedge clk or negedge rst_n) begin
+// 		if (!rst_n) begin
+// 			cnt <= 8'd0;	
+// 		end else begin
+// 			cnt <= pre_cnt;
+// 		end
+// 	end
+
+// 	assign count = cnt;
+// 	assign overflow = (cnt == 8'd255) ? (1'b1) : (1'b0);
+// endmodule
 
 module bit_counter (
 	input wire clk,
