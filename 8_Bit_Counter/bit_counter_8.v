@@ -1,7 +1,7 @@
 // “Mỗi lần có xung clock,
 // tôi lấy giá trị hiện tại,
 // cộng thêm 1,
-// rồi lưu lại.”
+// rồi lưu lại. Nếu overflow thì reset”
 
 
 module bit_counter (
